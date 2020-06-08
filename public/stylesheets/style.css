@@ -1,0 +1,171 @@
+
+
+html, body, head, table, tr, th, td, ul, li, a,
+header, h1 {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  outline: 0;
+
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  font-size: 100%;
+  text-decoration: inherit;
+  vertical-align: bottom;
+  box-sizing: inherit;
+
+  -webkit-user-select: none;  /* Chrome all / Safari all */
+  -moz-user-select: none;     /* Firefox all */
+  -ms-user-select: none;      /* IE 10+ */
+  -o-user-select: none;
+  user-select: none;
+}
+
+body {
+  line-height: 1;
+}
+
+ul {
+  list-style: none;
+}
+
+/* Header */
+header {
+  width: 700px;
+  margin: auto;
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  padding-bottom: 10px;
+}
+
+header > h1 {
+  font-size: 48px;
+  padding: 10px;
+}
+
+
+/* How to Play */
+.how-to-play {
+  text-align: center;
+  width: 300px;
+  margin: auto;
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  display: block;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid black;
+}
+
+.how-to-play:hover {
+  background: black;
+  color: white;
+  cursor: pointer;
+}
+
+/* Button */
+ul {
+  float: right;
+}
+
+li {
+  width: 29px;
+  height: 29px;
+  margin: 0.5px;
+  display: block;
+  float: left;
+  position: relative;
+}
+.board-resets {
+  float: none;
+  width: 510px;
+  margin: auto;
+  padding: 10px 0;
+}
+
+.board-resets > li {
+  float: left;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 0;
+  margin-right: 10px;
+  width: 160px;
+  font-family: "Roboto",sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.board-resets > li:last-child{
+  margin-right: 0;
+}
+
+.board-resets > li:hover {
+  background: black;
+  color: white;
+}
+
+.board-resets a {
+  display: block;
+  padding: 6px 10px;
+  text-align: center;
+}
+
+
+/* Table */
+table, tr, td, th {
+  border: 1px solid black;
+  border-collapse: collapse;
+  margin: 0px auto;
+}
+#firstrow {
+  height: 50px;
+  width: 200px;
+  vertical-align:bottom;
+  text-align:right;
+  background-color: lightgrey;
+}
+
+td {
+  width: 30px
+}
+#firstcol {
+  width: 80px;
+  height: 30px;
+  text-align: right;
+  vertical-align: bottom;
+  background-color: lightgrey;
+}
+
+table#nonogramCell th {
+   background-color: rgb(191, 191, 191);
+   font-weight: normal;
+}
+
+
+ table#nonogramCell td.unmarked {
+    background-color: rgb(255, 255, 255);
+ }
+
+ table#nonogramCell td.marked {
+    background-color: rgb(128, 128, 128);
+ }
+
+
+/* Stop watch */
+.container{
+    height: 50px;
+    width: 100%;
+}
+
+#display{
+    font-size: 20px;
+    text-align: center;
+    margin: 0px auto;
+}
+
+.buttons{
+    text-align: center;
+}

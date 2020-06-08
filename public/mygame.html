@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>my game</title>
+    <link rel="stylesheet" href="./stylesheets/style.css">
+
+
+  </head>
+  <body>
+    <header>
+      <h1>Puzzle Game</h1>
+      <a href="instruction.html" class="how-to-play">How To Play</a>
+    </header>
+    <div class="container">
+      <div id="display">
+            00:00:00
+        </div>
+
+        <div class="buttons">
+            <button id="startStop" onclick="startStop()">Start</button>
+        </div>
+    </div>
+
+    <table id= 'nonogramCell' >
+      <tr id = 'firstrow'>
+        <th> </th>
+        <th class='cols'>1 <br> 1</th>
+        <th class='cols'>8</th>
+        <th class='cols'>3 <br> 1</th>
+        <th class='cols'>4 <br> 2 <br> 1</th>
+        <th class='cols'>7 <br> 2 <br> 1</th>
+        <th class='cols'>1 <br> 4 <br> 2 <br> 1</th>
+        <th class='cols'>4 <br> 1</th>
+        <th class='cols'>1 <br> 2 <br> 4</th>
+        <th class='cols'>2 <br> 1 <br> 4</th>
+        <th class='cols'>3 <br> 2 <br> 1</th>
+        <th class='cols'>4 <br> 1 <br> 2 <br> 1</th>
+        <th class='cols'>1 <br> 1 <br> 2 <br> 2 <br> 1</th>
+        <th class='cols'>1 <br> 1 <br> 1 <br> 1</th>
+        <th class='cols'>8</th>
+        <th class='cols'>1 <br> 1 <br> 1 </th>
+
+      </tr>
+      <tr>
+        <th id= "firstcol" class='rows'>1</th>
+        <td class='unmarked'> </td>
+        <td class='unmarked'> </td>
+        <td class='unmarked'> </td>
+        <td class='unmarked'> </td>
+        <td class='unmarked'> </td>
+        <td class='unmarked'> </td>
+        <td class='unmarked'> </td>
+        <td class='unmarked'> </td>
+        <td class='unmarked'> </td>
+        <td class='unmarked'> </td>
+        <td class='unmarked'> </td>
+        <td class='unmarked'> </td>
+        <td class='unmarked'> </td>
+        <td class='unmarked'> </td>
+        <td class='marked'> </td>
+      </tr>
+      <tr>
+        <th id= "firstcol" class='rows'>2</th>
+        <td class='unmarked' onClick="if (this.bgColor=='#808080'){this.bgColor='#ffffff'} else {this.bgColor='#808080'}"> </td>
+        <td class='unmarked' onClick="if (this.bgColor=='#808080'){this.bgColor='#ffffff'} else {this.bgColor='#808080'}"> </td>
+        <td class='unmarked' onClick="if (this.bgColor=='#808080'){this.bgColor='#ffffff'} else {this.bgColor='#808080'}"> </td>
+        <td class='unmarked' onClick="if (this.bgColor=='#808080'){this.bgColor='#ffffff'} else {this.bgColor='#808080'}"> </td>
+        <td class='unmarked' onClick="if (this.bgColor=='#808080'){this.bgColor='#ffffff'} else {this.bgColor='#808080'}"> </td>
+        <td class='unmarked' onClick="if (this.bgColor=='#808080'){this.bgColor='#ffffff'} else {this.bgColor='#808080'}"> </td>
+        <td class='unmarked' onClick="if (this.bgColor=='#808080'){this.bgColor='#ffffff'} else {this.bgColor='#808080'}"> </td>
+        <td class='unmarked' onClick="if (this.bgColor=='#808080'){this.bgColor='#ffffff'} else {this.bgColor='#808080'}"> </td>
+        <td class='unmarked' onClick="if (this.bgColor=='#808080'){this.bgColor='#ffffff'} else {this.bgColor='#808080'}"> </td>
+        <td class='unmarked' onClick="if (this.bgColor=='#808080'){this.bgColor='#ffffff'} else {this.bgColor='#808080'}"> </td>
+        <td class='unmarked' onClick="if (this.bgColor=='#808080'){this.bgColor='#ffffff'} else {this.bgColor='#808080'}"> </td>
+        <td class='marked' onClick="if (this.bgColor=='#808080'){this.bgColor='#ffffff'} else {this.bgColor='#808080'}"> </td>
+        <td class='marked' onClick="if (this.bgColor=='#808080'){this.bgColor='#ffffff'} else {this.bgColor='#808080'}"> </td>
+        <td class='unmarked' onClick="if (this.bgColor=='#808080'){this.bgColor='#ffffff'} else {this.bgColor='#808080'}"> </td>
+        <td class='unmarked' onClick="if (this.bgColor=='#808080'){this.bgColor='#ffffff'} else {this.bgColor='#808080'}"> </td>
+      </tr>
+      <tr>
+        <th id= "firstcol" class='rows'>1</th>
+        <td class='unmarked' onClick="if (this.bgColor=='#808080'){this.bgColor='#ffffff'} else {this.bgColor='#808080'}"> </td>
+        <td class='unmarked' onClick="if (this.bgColor=='#808080'){this.bgColor='#ffffff'} else {this.bgColor='#808080'}"> </td>
+        <td class='unmarked' onClick="if (this.bgColor=='#808080'){this.bgColor='#ffffff'} else {this.bgColor='#808080'}"> </td>
+        <td class='unmarked' onClick="if (this.bgColor=='#808080'){this.bgColor='#ffffff'} else {this.bgColor='#808080'}"> </td>
+        <td class='marked' onClick="if (this.bgColor=='#808080'){this.bgColor='#ffffff'} else {this.bgColor='#808080'}"> </td>
+        <td class='unmarked' onClick="if (this.bgColor=='#808080'){this.bgColor='#ffffff'} else {this.bgColor='#808080'}"> </td>
+        <td class='unmarked' onClick="if (this.bgColor=='#808080'){this.bgColor='#ffffff'} else {this.bgColor='#808080'}"> </td>
+        <td class='unmarked' onClick="if (this.bgColor=='#808080'){this.bgColor='#ffffff'} else {this.bgColor='#808080'}"> </td>
+        <td class='unmarked' onClick="if (this.bgColor=='#808080'){this.bgColor='#ffffff'} else {this.bgColor='#808080'}"> </td>
+        <td class='unmarked' onClick="if (this.bgColor=='#808080'){this.bgColor='#ffffff'} else {this.bgColor='#808080'}"> </td>
+        <td class='unmarked' onClick="if (this.bgColor=='#808080'){this.bgColor='#ffffff'} else {this.bgColor='#808080'}"> </td>
+        <td class='unmarked' onClick="if (this.bgColor=='#808080'){this.bgColor='#ffffff'} else {this.bgColor='#808080'}"> </td>
+        <td class='unmarked' onClick="if (this.bgColor=='#808080'){this.bgColor='#ffffff'} else {this.bgColor='#808080'}"> </td>
+        <td class='unmarked' onClick="if (this.bgColor=='#808080'){this.bgColor='#ffffff'} else {this.bgColor='#808080'}"> </td>
+        <td class='unmarked' onClick="if (this.bgColor=='#808080'){this.bgColor='#ffffff'} else {this.bgColor='#808080'}"> </td>
+      </tr>
+      <tr>
+        <th id= "firstcol" class='rows'>2  2</th>
+        <td class='unmarked' onClick="if (this.bgColor=='#808080'){this.bgColor='#ffffff'} else {this.bgColor='#808080'}"> </td>
+        <td class='unmarked' onClick="if (this.bgColor=='#808080'){this.bgColor='#ffffff'} else {this.bgColor='#808080'}"> </td>
+        <td class='unmarked' onClick="if (this.bgColor=='#808080'){this.bgColor='#ffffff'} else {this.bgColor='#808080'}"> </td>
+        <td class='unmarked' onClick="if (this.bgColor=='#808080'){this.bgColor='#ffffff'} else {this.bgColor='#808080'}"> </td>
+        <td class='marked' onClick="if (this.bgColor=='#808080'){this.bgColor='#ffffff'} else {this.bgColor='#808080'}"> </td>
+        <td class='marked' onClick="if (this.bgColor=='#808080'){this.bgColor='#ffffff'} else {this.bgColor='#808080'}"> </td>
+        <td class='unmarked' onClick="if (this.bgColor=='#808080'){this.bgColor='#ffffff'} else {this.bgColor='#808080'}"> </td>
+        <td class='unmarked' onClick="if (this.bgColor=='#808080'){this.bgColor='#ffffff'} else {this.bgColor='#808080'}"> </td>
+        <td class='unmarked' onClick="if (this.bgColor=='#808080'){this.bgColor='#ffffff'} else {this.bgColor='#808080'}"> </td>
+        <td class='marked' onClick="if (this.bgColor=='#808080'){this.bgColor='#ffffff'} else {this.bgColor='#808080'}"> </td>
+        <td class='marked' onClick="if (this.bgColor=='#808080'){this.bgColor='#ffffff'} else {this.bgColor='#808080'}"> </td>
+        <td class='unmarked' onClick="if (this.bgColor=='#808080'){this.bgColor='#ffffff'} else {this.bgColor='#808080'}"> </td>
+        <td class='unmarked' onClick="if (this.bgColor=='#808080'){this.bgColor='#ffffff'} else {this.bgColor='#808080'}"> </td>
+        <td class='unmarked' onClick="if (this.bgColor=='#808080'){this.bgColor='#ffffff'} else {this.bgColor='#808080'}"> </td>
+        <td class='unmarked' onClick="if (this.bgColor=='#808080'){this.bgColor='#ffffff'} else {this.bgColor='#808080'}"> </td>
+      </tr>
+      <tr>
+        <th id= "firstcol" class='rows'>1  2</th>
+        <td class='unmarked' onClick="if (this.bgColor=='#808080'){this.bgColor='#ffffff'} else {this.bgColor='#808080'}"> </td>
+        <td class='unmarked' onClick="if (this.bgColor=='#808080'){this.bgColor='#ffffff'} else {this.bgColor='#808080'}"> </td>
+        <td class='unmarked' onClick="if (this.bgColor=='#808080'){this.bgColor='#ffffff'} else {this.bgColor='#808080'}"> </td>
+        <td class='unmarked' onClick="if (this.bgColor=='#808080'){this.bgColor='#ffffff'} else {this.bgColor='#808080'}"> </td>
+        <td class='marked' onClick="if (this.bgColor=='#808080'){this.bgColor='#ffffff'} else {this.bgColor='#808080'}"> </td>
+        <td class='unmarked' onClick="if (this.bgColor=='#808080'){this.bgColor='#ffffff'} else {this.bgColor='#808080'}"> </td>
+        <td class='unmarked' onClick="if (this.bgColor=='#808080'){this.bgColor='#ffffff'} else {this.bgColor='#808080'}"> </td>
+        <td class='unmarked' onClick="if (this.bgColor=='#808080'){this.bgColor='#ffffff'} else {this.bgColor='#808080'}"> </td>
+        <td class='unmarked' onClick="if (this.bgColor=='#808080'){this.bgColor='#ffffff'} else {this.bgColor='#808080'}"> </td>
+        <td class='marked' onClick="if (this.bgColor=='#808080'){this.bgColor='#ffffff'} else {this.bgColor='#808080'}"> </td>
+        <td class='marked' onClick="if (this.bgColor=='#808080'){this.bgColor='#ffffff'} else {this.bgColor='#808080'}"> </td>
+        <td class='unmarked' onClick="if (this.bgColor=='#808080'){this.bgColor='#ffffff'} else {this.bgColor='#808080'}"> </td>
+        <td class='unmarked' onClick="if (this.bgColor=='#808080'){this.bgColor='#ffffff'} else {this.bgColor='#808080'}"> </td>
+        <td class='unmarked' onClick="if (this.bgColor=='#808080'){this.bgColor='#ffffff'} else {this.bgColor='#808080'}"> </td>
+        <td class='unmarked' onClick="if (this.bgColor=='#808080'){this.bgColor='#ffffff'} else {this.bgColor='#808080'}"> </td>
+      </tr>
+      <tr>
+        <th id= "firstcol" class='rows'>9</th>
+        <td class='unmarked' onClick="if (this.bgColor=='#808080'){this.bgColor='#ffffff'} else {this.bgColor='#808080'}"> </td>
+        <td class='unmarked' onClick="if (this.bgColor=='#808080'){this.bgColor='#ffffff'} else {this.bgColor='#808080'}"> </td>
+        <td class='unmarked' onClick="if (this.bgColor=='#808080'){this.bgColor='#ffffff'} else {this.bgColor='#808080'}"> </td>
+        <td class='marked' onClick="if (this.bgColor=='#808080'){this.bgColor='#ffffff'} else {this.bgColor='#808080'}"> </td>
+        <td class='marked' onClick="if (this.bgColor=='#808080'){this.bgColor='#ffffff'} else {this.bgColor='#808080'}"> </td>
+        <td class='marked' onClick="if (this.bgColor=='#808080'){this.bgColor='#ffffff'} else {this.bgColor='#808080'}"> </td>
+        <td class='marked' onClick="if (this.bgColor=='#808080'){this.bgColor='#ffffff'} else {this.bgColor='#808080'}"> </td>
+        <td class='marked' onClick="if (this.bgColor=='#808080'){this.bgColor='#ffffff'} else {this.bgColor='#808080'}"> </td>
+        <td class='marked' onClick="if (this.bgColor=='#808080'){this.bgColor='#ffffff'} else {this.bgColor='#808080'}"> </td>
+        <td class='marked' onClick="if (this.bgColor=='#808080'){this.bgColor='#ffffff'} else {this.bgColor='#808080'}"> </td>
+        <td class='marked' onClick="if (this.bgColor=='#808080'){this.bgColor='#ffffff'} else {this.bgColor='#808080'}"> </td>
+        <td class='marked' onClick="if (this.bgColor=='#808080'){this.bgColor='#ffffff'} else {this.bgColor='#808080'}"> </td>
+        <td class='unmarked' onClick="if (this.bgColor=='#808080'){this.bgColor='#ffffff'} else {this.bgColor='#808080'}"> </td>
+        <td class='unmarked' onClick="if (this.bgColor=='#808080'){this.bgColor='#ffffff'} else {this.bgColor='#808080'}"> </td>
+        <td class='unmarked' onClick="if (this.bgColor=='#808080'){this.bgColor='#ffffff'} else {this.bgColor='#808080'}"> </td>
+      </tr>
+      <tr>
+        <th id= "firstcol" class='rows'>5  1  1  1</th>
+        <td class='unmarked' onClick="if (this.bgColor=='#808080'){this.bgColor='#ffffff'} else {this.bgColor='#808080'}"> </td>
+        <td class='unmarked' onClick="if (this.bgColor=='#808080'){this.bgColor='#ffffff'} else {this.bgColor='#808080'}"> </td>
+        <td class='marked' onClick="if (this.bgColor=='#808080'){this.bgColor='#ffffff'} else {this.bgColor='#808080'}"> </td>
+        <td class='marked' onClick="if (this.bgColor=='#808080'){this.bgColor='#ffffff'} else {this.bgColor='#808080'}"> </td>
+        <td class='marked' onClick="if (this.bgColor=='#808080'){this.bgColor='#ffffff'} else {this.bgColor='#808080'}"> </td>
+        <td class='marked' onClick="if (this.bgColor=='#808080'){this.bgColor='#ffffff'} else {this.bgColor='#808080'}"> </td>
+        <td class='marked' onClick="if (this.bgColor=='#808080'){this.bgColor='#ffffff'} else {this.bgColor='#808080'}"> </td>
+        <td class='unmarked' onClick="if (this.bgColor=='#808080'){this.bgColor='#ffffff'} else {this.bgColor='#808080'}"> </td>
+        <td class='marked' onClick="if (this.bgColor=='#808080'){this.bgColor='#ffffff'} else {this.bgColor='#808080'}"> </td>
+        <td class='unmarked' onClick="if (this.bgColor=='#808080'){this.bgColor='#ffffff'} else {this.bgColor='#808080'}"> </td>
+        <td class='marked' onClick="if (this.bgColor=='#808080'){this.bgColor='#ffffff'} else {this.bgColor='#808080'}"> </td>
+        <td class='unmarked' onClick="if (this.bgColor=='#808080'){this.bgColor='#ffffff'} else {this.bgColor='#808080'}"> </td>
+        <td class='marked' onClick="if (this.bgColor=='#808080'){this.bgColor='#ffffff'} else {this.bgColor='#808080'}"> </td>
+        <td class='unmarked' onClick="if (this.bgColor=='#808080'){this.bgColor='#ffffff'} else {this.bgColor='#808080'}"> </td>
+        <td class='unmarked' onClick="if (this.bgColor=='#808080'){this.bgColor='#ffffff'} else {this.bgColor='#808080'}"> </td>
+      </tr>
+      <tr>
+        <th id= "firstcol" class='rows'>7  1  1  1</th>
+        <td class='unmarked' onClick="if (this.bgColor=='#808080'){this.bgColor='#ffffff'} else {this.bgColor='#808080'}"> </td>
+        <td class='marked' onClick="if (this.bgColor=='#808080'){this.bgColor='#ffffff'} else {this.bgColor='#808080'}"> </td>
+        <td class='marked' onClick="if (this.bgColor=='#808080'){this.bgColor='#ffffff'} else {this.bgColor='#808080'}"> </td>
+        <td class='marked' onClick="if (this.bgColor=='#808080'){this.bgColor='#ffffff'} else {this.bgColor='#808080'}"> </td>
+        <td class='marked' onClick="if (this.bgColor=='#808080'){this.bgColor='#ffffff'} else {this.bgColor='#808080'}"> </td>
+        <td class='marked' onClick="if (this.bgColor=='#808080'){this.bgColor='#ffffff'} else {this.bgColor='#808080'}"> </td>
+        <td class='marked' onClick="if (this.bgColor=='#808080'){this.bgColor='#ffffff'} else {this.bgColor='#808080'}"> </td>
+        <td class='marked' onClick="if (this.bgColor=='#808080'){this.bgColor='#ffffff'} else {this.bgColor='#808080'}"> </td>
+        <td class='unmarked' onClick="if (this.bgColor=='#808080'){this.bgColor='#ffffff'} else {this.bgColor='#808080'}"> </td>
+        <td class='marked' onClick="if (this.bgColor=='#808080'){this.bgColor='#ffffff'} else {this.bgColor='#808080'}"> </td>
+        <td class='unmarked' onClick="if (this.bgColor=='#808080'){this.bgColor='#ffffff'} else {this.bgColor='#808080'}"> </td>
+        <td class='marked' onClick="if (this.bgColor=='#808080'){this.bgColor='#ffffff'} else {this.bgColor='#808080'}"> </td>
+        <td class='unmarked' onClick="if (this.bgColor=='#808080'){this.bgColor='#ffffff'} else {this.bgColor='#808080'}"> </td>
+        <td class='marked' onClick="if (this.bgColor=='#808080'){this.bgColor='#ffffff'} else {this.bgColor='#808080'}"> </td>
+        <td class='unmarked' onClick="if (this.bgColor=='#808080'){this.bgColor='#ffffff'} else {this.bgColor='#808080'}"> </td>
+      </tr>
+      <tr>
+        <th id= "firstcol" class='rows'>15</th>
+        <td class='marked' onClick="if (this.bgColor=='#808080'){this.bgColor='#ffffff'} else {this.bgColor='#808080'}"> </td>
+        <td class='marked' onClick="if (this.bgColor=='#808080'){this.bgColor='#ffffff'} else {this.bgColor='#808080'}"> </td>
+        <td class='marked' onClick="if (this.bgColor=='#808080'){this.bgColor='#ffffff'} else {this.bgColor='#808080'}"> </td>
+        <td class='marked' onClick="if (this.bgColor=='#808080'){this.bgColor='#ffffff'} else {this.bgColor='#808080'}"> </td>
+        <td class='marked' onClick="if (this.bgColor=='#808080'){this.bgColor='#ffffff'} else {this.bgColor='#808080'}"> </td>
+        <td class='marked' onClick="if (this.bgColor=='#808080'){this.bgColor='#ffffff'} else {this.bgColor='#808080'}"> </td>
+        <td class='marked' onClick="if (this.bgColor=='#808080'){this.bgColor='#ffffff'} else {this.bgColor='#808080'}"> </td>
+        <td class='marked' onClick="if (this.bgColor=='#808080'){this.bgColor='#ffffff'} else {this.bgColor='#808080'}"> </td>
+        <td class='marked' onClick="if (this.bgColor=='#808080'){this.bgColor='#ffffff'} else {this.bgColor='#808080'}"> </td>
+        <td class='marked' onClick="if (this.bgColor=='#808080'){this.bgColor='#ffffff'} else {this.bgColor='#808080'}"> </td>
+        <td class='marked' onClick="if (this.bgColor=='#808080'){this.bgColor='#ffffff'} else {this.bgColor='#808080'}"> </td>
+        <td class='marked' onClick="if (this.bgColor=='#808080'){this.bgColor='#ffffff'} else {this.bgColor='#808080'}"> </td>
+        <td class='marked' onClick="if (this.bgColor=='#808080'){this.bgColor='#ffffff'} else {this.bgColor='#808080'}"> </td>
+        <td class='marked' onClick="if (this.bgColor=='#808080'){this.bgColor='#ffffff'} else {this.bgColor='#808080'}"> </td>
+        <td class='marked' onClick="if (this.bgColor=='#808080'){this.bgColor='#ffffff'} else {this.bgColor='#808080'}"> </td>
+      </tr>
+      <tr>
+        <th id= "firstcol" class='rows'>1  1</th>
+        <td class='unmarked' onClick="if (this.bgColor=='#808080'){this.bgColor='#ffffff'} else {this.bgColor='#808080'}"> </td>
+        <td class='marked' onClick="if (this.bgColor=='#808080'){this.bgColor='#ffffff'} else {this.bgColor='#808080'}"> </td>
+        <td class='unmarked' onClick="if (this.bgColor=='#808080'){this.bgColor='#ffffff'} else {this.bgColor='#808080'}"> </td>
+        <td class='unmarked' onClick="if (this.bgColor=='#808080'){this.bgColor='#ffffff'} else {this.bgColor='#808080'}"> </td>
+        <td class='unmarked' onClick="if (this.bgColor=='#808080'){this.bgColor='#ffffff'} else {this.bgColor='#808080'}"> </td>
+        <td class='unmarked' onClick="if (this.bgColor=='#808080'){this.bgColor='#ffffff'} else {this.bgColor='#808080'}"> </td>
+        <td class='unmarked' onClick="if (this.bgColor=='#808080'){this.bgColor='#ffffff'} else {this.bgColor='#808080'}"> </td>
+        <td class='unmarked' onClick="if (this.bgColor=='#808080'){this.bgColor='#ffffff'} else {this.bgColor='#808080'}"> </td>
+        <td class='unmarked' onClick="if (this.bgColor=='#808080'){this.bgColor='#ffffff'} else {this.bgColor='#808080'}"> </td>
+        <td class='unmarked' onClick="if (this.bgColor=='#808080'){this.bgColor='#ffffff'} else {this.bgColor='#808080'}"> </td>
+        <td class='unmarked' onClick="if (this.bgColor=='#808080'){this.bgColor='#ffffff'} else {this.bgColor='#808080'}"> </td>
+        <td class='unmarked' onClick="if (this.bgColor=='#808080'){this.bgColor='#ffffff'} else {this.bgColor='#808080'}"> </td>
+        <td class='unmarked' onClick="if (this.bgColor=='#808080'){this.bgColor='#ffffff'} else {this.bgColor='#808080'}"> </td>
+        <td class='marked' onClick="if (this.bgColor=='#808080'){this.bgColor='#ffffff'} else {this.bgColor='#808080'}"> </td>
+        <td class='unmarked' onClick="if (this.bgColor=='#808080'){this.bgColor='#ffffff'} else {this.bgColor='#808080'}"> </td>
+      </tr>
+      <tr>
+        <th id= "firstcol" class='rows'>1  3  2  1</th>
+        <td class='unmarked' onClick="if (this.bgColor=='#808080'){this.bgColor='#ffffff'} else {this.bgColor='#808080'}"> </td>
+        <td class='marked' onClick="if (this.bgColor=='#808080'){this.bgColor='#ffffff'} else {this.bgColor='#808080'}"> </td>
+        <td class='unmarked' onClick="if (this.bgColor=='#808080'){this.bgColor='#ffffff'} else {this.bgColor='#808080'}"> </td>
+        <td class='marked' onClick="if (this.bgColor=='#808080'){this.bgColor='#ffffff'} else {this.bgColor='#808080'}"> </td>
+        <td class='marked' onClick="if (this.bgColor=='#808080'){this.bgColor='#ffffff'} else {this.bgColor='#808080'}"> </td>
+        <td class='marked' onClick="if (this.bgColor=='#808080'){this.bgColor='#ffffff'} else {this.bgColor='#808080'}"> </td>
+        <td class='unmarked' onClick="if (this.bgColor=='#808080'){this.bgColor='#ffffff'} else {this.bgColor='#808080'}"> </td>
+        <td class='unmarked' onClick="if (this.bgColor=='#808080'){this.bgColor='#ffffff'} else {this.bgColor='#808080'}"> </td>
+        <td class='unmarked' onClick="if (this.bgColor=='#808080'){this.bgColor='#ffffff'} else {this.bgColor='#808080'}"> </td>
+        <td class='unmarked' onClick="if (this.bgColor=='#808080'){this.bgColor='#ffffff'} else {this.bgColor='#808080'}"> </td>
+        <td class='marked' onClick="if (this.bgColor=='#808080'){this.bgColor='#ffffff'} else {this.bgColor='#808080'}"> </td>
+        <td class='marked' onClick="if (this.bgColor=='#808080'){this.bgColor='#ffffff'} else {this.bgColor='#808080'}"> </td>
+        <td class='unmarked' onClick="if (this.bgColor=='#808080'){this.bgColor='#ffffff'} else {this.bgColor='#808080'}"> </td>
+        <td class='marked' onClick="if (this.bgColor=='#808080'){this.bgColor='#ffffff'} else {this.bgColor='#808080'}"> </td>
+        <td class='unmarked' onClick="if (this.bgColor=='#808080'){this.bgColor='#ffffff'} else {this.bgColor='#808080'}"> </td>
+      </tr>
+      <tr>
+        <th id= "firstcol" class='rows'>1  3  2  2  1</th>
+        <td class='unmarked' onClick="if (this.bgColor=='#808080'){this.bgColor='#ffffff'} else {this.bgColor='#808080'}"> </td>
+        <td class='marked' onClick="if (this.bgColor=='#808080'){this.bgColor='#ffffff'} else {this.bgColor='#808080'}"> </td>
+        <td class='unmarked' onClick="if (this.bgColor=='#808080'){this.bgColor='#ffffff'} else {this.bgColor='#808080'}"> </td>
+        <td class='marked' onClick="if (this.bgColor=='#808080'){this.bgColor='#ffffff'} else {this.bgColor='#808080'}"> </td>
+        <td class='marked' onClick="if (this.bgColor=='#808080'){this.bgColor='#ffffff'} else {this.bgColor='#808080'}"> </td>
+        <td class='marked' onClick="if (this.bgColor=='#808080'){this.bgColor='#ffffff'} else {this.bgColor='#808080'}"> </td>
+        <td class='unmarked' onClick="if (this.bgColor=='#808080'){this.bgColor='#ffffff'} else {this.bgColor='#808080'}"> </td>
+        <td class='marked' onClick="if (this.bgColor=='#808080'){this.bgColor='#ffffff'} else {this.bgColor='#808080'}"> </td>
+        <td class='marked' onClick="if (this.bgColor=='#808080'){this.bgColor='#ffffff'} else {this.bgColor='#808080'}"> </td>
+        <td class='unmarked' onClick="if (this.bgColor=='#808080'){this.bgColor='#ffffff'} else {this.bgColor='#808080'}"> </td>
+        <td class='marked' onClick="if (this.bgColor=='#808080'){this.bgColor='#ffffff'} else {this.bgColor='#808080'}"> </td>
+        <td class='marked' onClick="if (this.bgColor=='#808080'){this.bgColor='#ffffff'} else {this.bgColor='#808080'}"> </td>
+        <td class='unmarked' onClick="if (this.bgColor=='#808080'){this.bgColor='#ffffff'} else {this.bgColor='#808080'}"> </td>
+        <td class='marked' onClick="if (this.bgColor=='#808080'){this.bgColor='#ffffff'} else {this.bgColor='#808080'}"> </td>
+        <td class='unmarked' onClick="if (this.bgColor=='#808080'){this.bgColor='#ffffff'} else {this.bgColor='#808080'}"> </td>
+      </tr>
+      <tr>
+        <th id= "firstcol" class='rows'>1  2  1</th>
+        <td class='unmarked' onClick="if (this.bgColor=='#808080'){this.bgColor='#ffffff'} else {this.bgColor='#808080'}"> </td>
+        <td class='marked' onClick="if (this.bgColor=='#808080'){this.bgColor='#ffffff'} else {this.bgColor='#808080'}"> </td>
+        <td class='unmarked' onClick="if (this.bgColor=='#808080'){this.bgColor='#ffffff'} else {this.bgColor='#808080'}"> </td>
+        <td class='unmarked' onClick="if (this.bgColor=='#808080'){this.bgColor='#ffffff'} else {this.bgColor='#808080'}"> </td>
+        <td class='unmarked' onClick="if (this.bgColor=='#808080'){this.bgColor='#ffffff'} else {this.bgColor='#808080'}"> </td>
+        <td class='unmarked' onClick="if (this.bgColor=='#808080'){this.bgColor='#ffffff'} else {this.bgColor='#808080'}"> </td>
+        <td class='unmarked' onClick="if (this.bgColor=='#808080'){this.bgColor='#ffffff'} else {this.bgColor='#808080'}"> </td>
+        <td class='marked' onClick="if (this.bgColor=='#808080'){this.bgColor='#ffffff'} else {this.bgColor='#808080'}"> </td>
+        <td class='marked' onClick="if (this.bgColor=='#808080'){this.bgColor='#ffffff'} else {this.bgColor='#808080'}"> </td>
+        <td class='unmarked' onClick="if (this.bgColor=='#808080'){this.bgColor='#ffffff'} else {this.bgColor='#808080'}"> </td>
+        <td class='unmarked' onClick="if (this.bgColor=='#808080'){this.bgColor='#ffffff'} else {this.bgColor='#808080'}"> </td>
+        <td class='unmarked' onClick="if (this.bgColor=='#808080'){this.bgColor='#ffffff'} else {this.bgColor='#808080'}"> </td>
+        <td class='unmarked' onClick="if (this.bgColor=='#808080'){this.bgColor='#ffffff'} else {this.bgColor='#808080'}"> </td>
+        <td class='marked' onClick="if (this.bgColor=='#808080'){this.bgColor='#ffffff'} else {this.bgColor='#808080'}"> </td>
+        <td class='unmarked' onClick="if (this.bgColor=='#808080'){this.bgColor='#ffffff'} else {this.bgColor='#808080'}"> </td>
+      </tr>
+      <tr>
+        <th id= "firstcol" class='rows'>1  2  1</th>
+        <td class='unmarked' onClick="if (this.bgColor=='#808080'){this.bgColor='#ffffff'} else {this.bgColor='#808080'}"> </td>
+        <td class='marked' onClick="if (this.bgColor=='#808080'){this.bgColor='#ffffff'} else {this.bgColor='#808080'}"> </td>
+        <td class='unmarked' onClick="if (this.bgColor=='#808080'){this.bgColor='#ffffff'} else {this.bgColor='#808080'}"> </td>
+        <td class='unmarked' onClick="if (this.bgColor=='#808080'){this.bgColor='#ffffff'} else {this.bgColor='#808080'}"> </td>
+        <td class='unmarked' onClick="if (this.bgColor=='#808080'){this.bgColor='#ffffff'} else {this.bgColor='#808080'}"> </td>
+        <td class='unmarked' onClick="if (this.bgColor=='#808080'){this.bgColor='#ffffff'} else {this.bgColor='#808080'}"> </td>
+        <td class='unmarked' onClick="if (this.bgColor=='#808080'){this.bgColor='#ffffff'} else {this.bgColor='#808080'}"> </td>
+        <td class='marked' onClick="if (this.bgColor=='#808080'){this.bgColor='#ffffff'} else {this.bgColor='#808080'}"> </td>
+        <td class='marked' onClick="if (this.bgColor=='#808080'){this.bgColor='#ffffff'} else {this.bgColor='#808080'}"> </td>
+        <td class='unmarked' onClick="if (this.bgColor=='#808080'){this.bgColor='#ffffff'} else {this.bgColor='#808080'}"> </td>
+        <td class='unmarked' onClick="if (this.bgColor=='#808080'){this.bgColor='#ffffff'} else {this.bgColor='#808080'}"> </td>
+        <td class='unmarked' onClick="if (this.bgColor=='#808080'){this.bgColor='#ffffff'} else {this.bgColor='#808080'}"> </td>
+        <td class='unmarked' onClick="if (this.bgColor=='#808080'){this.bgColor='#ffffff'} else {this.bgColor='#808080'}"> </td>
+        <td class='marked' onClick="if (this.bgColor=='#808080'){this.bgColor='#ffffff'} else {this.bgColor='#808080'}"> </td>
+        <td class='unmarked' onClick="if (this.bgColor=='#808080'){this.bgColor='#ffffff'} else {this.bgColor='#808080'}"> </td>
+      </tr>
+      <tr>
+        <th id= "firstcol" class='rows'>15</th>
+        <td class='marked' onClick="if (this.bgColor=='#808080'){this.bgColor='#ffffff'} else {this.bgColor='#808080'}"> </td>
+        <td class='marked' onClick="if (this.bgColor=='#808080'){this.bgColor='#ffffff'} else {this.bgColor='#808080'}"> </td>
+        <td class='marked' onClick="if (this.bgColor=='#808080'){this.bgColor='#ffffff'} else {this.bgColor='#808080'}"> </td>
+        <td class='marked' onClick="if (this.bgColor=='#808080'){this.bgColor='#ffffff'} else {this.bgColor='#808080'}"> </td>
+        <td class='marked' onClick="if (this.bgColor=='#808080'){this.bgColor='#ffffff'} else {this.bgColor='#808080'}"> </td>
+        <td class='marked' onClick="if (this.bgColor=='#808080'){this.bgColor='#ffffff'} else {this.bgColor='#808080'}"> </td>
+        <td class='marked' onClick="if (this.bgColor=='#808080'){this.bgColor='#ffffff'} else {this.bgColor='#808080'}"> </td>
+        <td class='marked' onClick="if (this.bgColor=='#808080'){this.bgColor='#ffffff'} else {this.bgColor='#808080'}"> </td>
+        <td class='marked' onClick="if (this.bgColor=='#808080'){this.bgColor='#ffffff'} else {this.bgColor='#808080'}"> </td>
+        <td class='marked' onClick="if (this.bgColor=='#808080'){this.bgColor='#ffffff'} else {this.bgColor='#808080'}"> </td>
+        <td class='marked' onClick="if (this.bgColor=='#808080'){this.bgColor='#ffffff'} else {this.bgColor='#808080'}"> </td>
+        <td class='marked' onClick="if (this.bgColor=='#808080'){this.bgColor='#ffffff'} else {this.bgColor='#808080'}"> </td>
+        <td class='marked' onClick="if (this.bgColor=='#808080'){this.bgColor='#ffffff'} else {this.bgColor='#808080'}"> </td>
+        <td class='marked' onClick="if (this.bgColor=='#808080'){this.bgColor='#ffffff'} else {this.bgColor='#808080'}"> </td>
+        <td class='marked' onClick="if (this.bgColor=='#808080'){this.bgColor='#ffffff'} else {this.bgColor='#808080'}"> </td>
+      </tr>
+    </table>
+
+    <ul class="board-resets group">
+        <li id= 'solve' class= "solution"><a href="#">Show Solution</a></li>
+        <li id= 'reset' class="start-over"><a href="#">Reset Board</a></li>
+
+    </ul>
+    <br>
+    <br>
+    <br>
+    <script src="cells.js" async></script>
+    <script type="text/javascript" src="./script.js"></script>
+
+  </body>
+
+</html>
